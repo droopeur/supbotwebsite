@@ -147,14 +147,7 @@ $(function() {
 	};
 	
 	// launch popup
-	$launchButton.on('click', function(e) {
-		if ( Modernizr.video  ) {
-			var target = $(this).data('videomodal');
-			launchVideo( target );
-			e.preventDefault();
-		} 
-		
-	});
+	
 	
 	var togglePlayPause = function( trigger ) {
 		var videoEle = trigger.get(0);
@@ -333,7 +326,19 @@ $(function() {
 		if ( $nextLevel ) {
 			$('body,html').animate({scrollTop: target}, 700, "linear");
 		}
-	});
+	}
+);
+$('a[href^="#"]').click(function(){
+	var the_id = $(this).attr("href");
+	if (the_id === '#') {
+		return;
+	}
+	$('html, body').animate({
+		scrollTop:$(the_id).offset().top
+	}, 'slow');
+	return false;
+});
+
 
 	// scroll to next level - this should be merged with previous function
 	$('.btn-scroll').on('click', function ( e ) {
