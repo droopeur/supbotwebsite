@@ -1052,6 +1052,7 @@ input.text:focus {
 
 @media ( min-width: 1200px ) {
 	.hero-home {
+		background-color: #5c6164;
 		background-image: url("../img/frame-1.jpg");
 	}
 
@@ -1086,9 +1087,27 @@ input.text:focus {
 @media ( max-width: 767px ) {
 	.ueno-iphone-safari .hero-home [data-toggle="modal"] {
 		display: none;
+		
+	}
+	.hero-home {
+		background-color: #5c6164;
+		background-image: url("../img/frame-2.png");
+	}
+	.btn-prepend {
+		margin: 6px; 
+
+	}
+	.btn-icon {
+		padding: 10px !important;
+		font-size:200% !important
+	
 	}
 }
+.btn-icon {
+	padding: 15px;
+	font-size:200% !important
 
+}
 @media (min-width: 768px ) and ( min-height: 510px ) {
 
 	.hero-home .btn-prepend  + .btn-prepend  {
